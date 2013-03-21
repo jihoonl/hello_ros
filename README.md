@@ -15,11 +15,11 @@ and how to generate
 - action
 
 
-### How To ###
+## How To ##
 
 Assumes that up-to-date ROS(>=groovy) is installed. If not please, visit installation page.(http://www.ros.org/wiki/ROS/Installation)
 
-1. Create workspace directory
+### Create workspace directory
 
 <pre>
 > mkdir ros
@@ -33,14 +33,14 @@ If catkin_init_workspace command is not available, please do
 
 > source /opt/ros/<YOUR ROS RELEASE VERSION>/setup.bash
 
-2. Download source file
+### Download source file
 
 <pre>
 > cd ros/src
 > git clone https://github.com/jihoonl/hello_ros.git
 </pre>
 
-3. Compile
+### Compile
 
 <pre>
 > cd ros
@@ -49,18 +49,18 @@ If catkin_init_workspace command is not available, please do
 
 After catkin_make, 'build' and 'devel' directories are created.
 
-4. Execution
+### Execution
 
 Assumes that roscore is already running...
  
-4.1 Execute hello_cpp
+#### Execute hello_cpp
 <pre>
 > cd ros/devel
 > source setup.bash
 > rosrun hello_cpp hello_cpp
 </pre>
 
-4.2 Execute hello_python
+#### Execute hello_python
 <pre>
 > cd ros/devel
 > source setup.bash
