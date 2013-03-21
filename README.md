@@ -15,7 +15,7 @@ and how to generate
 - action
 
 
-=== How To ===
+### How To ###
 
 Assumes that up-to-date ROS(>=groovy) is installed. If not please, visit installation page.(http://www.ros.org/wiki/ROS/Installation)
 
