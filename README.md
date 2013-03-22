@@ -22,10 +22,10 @@ Assumes that up-to-date ROS(>=groovy) is installed. If not please, visit install
 ### Create workspace directory
 
 <pre>
-> mkdir ros
-> cd ros
-> mkdir src
-> cd src
+> mkdir ~/ros
+> cd ~/ros
+> mkdir ~/ros/src
+> cd ~/ros/src
 > catkin_init_workspace
 </pre>
 
@@ -36,14 +36,14 @@ If catkin_init_workspace command is not available, please do
 ### Download source file
 
 <pre>
-> cd ros/src
+> cd ~/ros/src
 > git clone https://github.com/jihoonl/hello_ros.git
 </pre>
 
 ### Compile
 
 <pre>
-> cd ros
+> cd ~/ros
 > catkin_make
 </pre>
 
