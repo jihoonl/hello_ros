@@ -21,6 +21,21 @@ Assumes that up-to-date ROS(>=groovy) is installed. If not please, visit install
 
 ### Create workspace directory
 
+This step illustrates how to create catkin workspace under ros directory and how to download sources into workspace.
+After the compilation step you should have the directory structure below.
+
+<pre>
+   ros ----- build
+         |
+         --- devel
+         |
+         --- src/CMakeLists.txt
+             src/hello_ros/hello_cpp
+                           hello_python
+</pre>
+
+
+
 <pre>
 > mkdir ~/ros
 > cd ~/ros
@@ -48,6 +63,7 @@ If catkin_init_workspace command is not available, please do
 </pre>
 
 After catkin_make, 'build' and 'devel' directories are created.
+
 
 ### Execution
 
