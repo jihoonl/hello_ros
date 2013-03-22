@@ -19,10 +19,7 @@ and how to generate
 
 Assumes that up-to-date ROS(>=groovy) is installed. If not please, visit installation page.(http://www.ros.org/wiki/ROS/Installation)
 
-### Create workspace directory
-
-This step illustrates how to create catkin workspace under ros directory and how to download sources into workspace.
-After the compilation step you should have the directory structure below.
+After the full step you should have the directory structure below.
 
 <pre>
    ros ----- build
@@ -35,6 +32,9 @@ After the compilation step you should have the directory structure below.
 </pre>
 
 
+### Create workspace directory
+
+This step illustrates how to create catkin workspace under ros directory and how to download sources into workspace.
 
 <pre>
 > mkdir ~/ros
