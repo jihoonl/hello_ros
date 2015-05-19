@@ -4,23 +4,25 @@ import cv2
 import cv_bridge
 import sensor_msgs.msg
 
-
 def process_image(msg): 
     global image_pub
+    global br
 
-    br = cv_bridge.CvBridge()
-    cv_img = br.imgmsg_to_cv2(msg)
-    gray_cv_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
-    gray_imgmsg = br.cv2_to_imgmsg(gray_cv_img)
+    cv_img = br.imgmsg_to_cv2(msg) # Convert to opencv format using cv_bridge
+    gray_cv_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY) # Grayscale
+    gray_imgmsg = br.cv2_to_imgmsg(gray_cv_img) # Convert back to ros image msg
 
-    image_pub.publish(gray_imgmsg)
+    image_pub.publish(gray_imgmsg) # Publish
 
 if __name__ == '__main__':
     global image_pub
-    rospy.init_node('listen_img')
+    global br
+
+    rospy.init_node('listen_img') # Initialise
     
-    image_pub = rospy.Publisher("new_image",sensor_msgs.msg.Image)
-    image_sub = rospy.Subscriber("image",sensor_msgs.msg.Image, processImage)
+    br = cv_bridge.CvBridge() # Instanticate CV Bridge
+    image_pub = rospy.Publisher("new_image",sensor_msgs.msg.Image) # publisher
+    image_sub = rospy.Subscriber("image",sensor_msgs.msg.Image, process_image) # Subscriber 
     rospy.loginfo('initialized')
 
-    rospy.spin()
+    rospy.spin() # Wait for Ctrl-C
