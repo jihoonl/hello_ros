@@ -1,0 +1,6 @@
+<launch>
+  <node name="voice_cmd_vel" pkg="string_to_twist" type="send_twist.py" output="screen">
+    <remap from="command" to="/recognizer/output"/>
+    <remap from="cmd_vel" to="/mobile_base/commands/velocity"/>
+  </node>
+</launch>

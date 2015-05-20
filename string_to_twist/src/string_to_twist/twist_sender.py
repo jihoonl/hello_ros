@@ -6,7 +6,7 @@ class TwistSender:
     def __init__(self, command_topic, twist_topic, speed=0.1):
         self.speed = speed
         self.sub_command = rospy.Subscriber(command_topic, std_msgs.msg.String, self.process_command)
-        self.pub_twist = rospy.Publishser(topic_name, geometry_msgs.msg.Twist, queue_size=1)
+        self.pub_twist = rospy.Publisher(twist_topic, geometry_msgs.msg.Twist, queue_size=1)
 
         self.twist_msgs = geometry_msgs.msg.Twist()
         self.twist_msgs.linear.x = 0.0
@@ -39,5 +39,5 @@ class TwistSender:
         '''
         r = rospy.Rate(3.0)
         while not rospy.is_shutdown():
-            self.pub_twist.publish(self.twist_msg)            
+            self.pub_twist.publish(self.twist_msgs)
             r.sleep()

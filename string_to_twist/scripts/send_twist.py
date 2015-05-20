@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
   Sends twist message
 """
@@ -12,6 +13,6 @@ if __name__ == '__main__':
     speed = 0.1
 
     ts = string_to_twist.TwistSender(command_topic, twist_topic, speed)
-    rospy.ioginfo("Initialised")
+    rospy.loginfo("Initialised")
     ts.spin()
     rospy.loginfo("Bye Bye")
