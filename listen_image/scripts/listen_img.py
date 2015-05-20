@@ -8,13 +8,10 @@ import sensor_msgs.msg
 def process_image(msg): 
     global image_pub
 
-    #w = msg.width
-    #h = msg.height
+    w = msg.width
+    h = msg.height
 
-    #print 'width : ' + str(w) + '\theight : ' + str(h)
-    br = cv_bridge.CvBridge()
-
-    cv_img = cv
+    print 'width : ' + str(w) + '\theight : ' + str(h)
 
 
 if __name__ == '__main__':
@@ -22,7 +19,7 @@ if __name__ == '__main__':
     rospy.init_node('listen_img')
     
     image_pub = rospy.Publisher("new_image",sensor_msgs.msg.Image)
-    image_sub = rospy.Subscriber("image",sensor_msgs.msg.Image, processImage)
+    image_sub = rospy.Subscriber("image",sensor_msgs.msg.Image, process_image)
     rospy.loginfo('initialized')
 
     rospy.spin()
