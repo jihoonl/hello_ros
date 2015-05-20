@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     command_topic = 'command'
     twist_topic = 'cmd_vel'
-    speed = 0.1
+    speed = 0.2
 
     ts = string_to_twist.TwistSender(command_topic, twist_topic, speed)
     rospy.loginfo("Initialised")

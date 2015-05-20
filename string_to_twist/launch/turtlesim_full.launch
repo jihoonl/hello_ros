@@ -1,0 +1,13 @@
+<launch>
+  <node name="turtlesim" pkg="turtlesim" type="turtlesim_node"/> 
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py">
+    <param name="lm" value="$(find pocketsphinx)/demo/voice_cmd.lm"/>
+    <param name="dict" value="$(find pocketsphinx)/demo/voice_cmd.dic"/>
+  </node>
+  
+  <node name="voice_cmd_vel" pkg="string_to_twist" type="send_twist.py" output="screen">
+    <remap from="command" to="/recognizer/output"/>
+    <remap from="cmd_vel" to="/turtle1/cmd_vel"/>
+  </node>
+</launch>
