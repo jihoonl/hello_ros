@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>string_to_twist</name>
+  <version>0.0.0</version>
+  <description>
+    Python script that listens to string command and send out twist message
+  </description>
+
+  <maintainer email="jihoonlee.in@gmail.com">Jihoon Lee</maintainer>
+
+  <license>BSD</license>
+
+  <!-- <url type="website">http://wiki.ros.org/string_to_twist</url> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>pocketsphinx</run_depend>
+
+  <export>
+  </export>
+</package>
