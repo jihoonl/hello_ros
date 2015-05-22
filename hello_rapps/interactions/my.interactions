@@ -23,3 +23,18 @@
     remappings:
       - remap_from: /string_command
         remap_to: /recognizer/output
+
+- name: com.github.turtlebot.turtlebot_android.voice_commander.indigo.VoiceCommander
+  role: Mine
+  compatibility: rocon:/*/*/hydro|indigo/jellybean|ice_cream_sandwich|kitkat
+  display_name: Voice Commander
+  description: Controle turtlebot via Voice
+  max: -1
+  remappings:
+    - remap_from: voice_command
+      remap_to: /commander/voice_command
+  pairing:
+     rapp: hello_rapps/string_to_twist
+     remappings:
+       - remap_from: /string_command
+         remap_to: /commander/voice_command
