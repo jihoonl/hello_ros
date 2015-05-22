@@ -1,6 +1,5 @@
 display:            String Command Teleop
 description:        Teleoperate with string command
-author:             Jihoon Lee
 compatibility:      rocon:/*/*/indigo/trusty # Any robot platform runs under indigo/trusty
 #icon: 
 launch:             string_to_twist.launch
