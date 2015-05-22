@@ -9,3 +9,17 @@
   pairing:
     rapp: rocon_apps/chirp
     remappings: []
+
+- name: string_to_twist/voice_recogniser.launch
+  role: Mine
+  compatibility: rocon:/pc/*/indigo/trusty
+  display_name: Voice Commander
+  description: Recognise Voice
+  max: -1
+  icon:
+    resource_name: rocon_apps/cow.png
+  pairing:
+    rapp: hello_rapps
+    remappings:
+      - remap_from: /string_command
+        remap_to: /recognizer/output
