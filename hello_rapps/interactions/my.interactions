@@ -19,7 +19,7 @@
   icon:
     resource_name: rocon_apps/cow.png
   pairing:
-    rapp: hello_rapps
+    rapp: hello_rapps/string_to_twist
     remappings:
       - remap_from: /string_command
         remap_to: /recognizer/output
