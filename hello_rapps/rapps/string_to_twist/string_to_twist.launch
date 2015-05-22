@@ -1,6 +1,7 @@
 <launch>
   <node name="voice_cmd_vel" pkg="string_to_twist" type="send_twist.py" output="screen">
     <remap from="command" to="/string_command"/>
-    <remap from="cmd_vel" to="/cmd_vel_mux/input/teleop"/> 
+<!--    <remap from="cmd_vel" to="/cmd_vel_mux/input/teleop"/> -->
+    <remap from="cmd_vel" to="/turtle1/cmd_vel"/> 
   </node>
 </launch>
