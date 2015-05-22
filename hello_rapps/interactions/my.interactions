@@ -17,7 +17,7 @@
   description: Recognise Voice
   max: -1
   icon:
-    resource_name: rocon_apps/cow.png
+    resource_name: hello_rapps/headphone.png
   pairing:
     rapp: hello_rapps/string_to_twist
     remappings:
