@@ -11,7 +11,7 @@
     remappings: []
 
 - name: string_to_twist/voice_recogniser.launch
-  role: Mine
+  role: Pc
   compatibility: rocon:/pc/*/indigo/trusty
   display_name: Voice Commander
   description: Recognise Voice
@@ -22,19 +22,16 @@
     rapp: hello_rapps/string_to_twist
     remappings:
       - remap_from: /string_command
-        remap_to: /recognizer/output
+        remap_to: /recognizer/output 
 
 - name: com.github.turtlebot.turtlebot_android.voice_commander.indigo.VoiceCommander
-  role: Mine
+  role: Android
   compatibility: rocon:/*/*/hydro|indigo/jellybean|ice_cream_sandwich|kitkat
   display_name: Voice Commander
-  description: Controle turtlebot via Voice
+  description: Control turtlebot with Voice
   max: -1
   remappings:
     - remap_from: voice_command
-      remap_to: /commander/voice_command
+      remap_to: /string_command
   pairing:
      rapp: hello_rapps/string_to_twist
-     remappings:
-       - remap_from: /string_command
-         remap_to: /commander/voice_command
